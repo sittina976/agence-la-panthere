@@ -376,6 +376,9 @@ a:hover {
     padding-left: 30px;
     padding-right: 30px;
 }
+.col-sm-6 a{
+    font-size: 16px;
+}
 p {
     font-size: 15px;
 }
@@ -388,6 +391,14 @@ p {
 }
 .projet{
     font-size: 22px;
+}
+
+.image-resize-mode{
+    width: 100px;
+    height: 100%;
+}
+.navbar-brand img{
+    height: 40px;
 }
 
 @media (min-width: 768px) {
@@ -762,11 +773,12 @@ h4 {
 }
 
 .white {
-    color: #FFFFFF!important;::
+    color: #FFFFFF!important;
 }
 
 .portfolio-thumb {
     margin-bottom: 24px;
+    width: 100%;
 }
 
 .portfolio-row {
@@ -840,7 +852,7 @@ h4 {
 }
 */
 .bg-banniere {
-    background-image: url("img/agence-la-panthere-min\ .jpg");
+    background-image: url("img/agence-la-panthere-min-.webp");
 }
 
 .bg-presentation {
@@ -870,13 +882,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -894,21 +906,13 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
+    
     .bloc-group,
     .bloc-group .bloc {
         display: block;
         width: 100%;
     }
-    .bloc-fill-screen .fill-bloc-top-edge,
-    .bloc-fill-screen .fill-bloc-bottom-edge {
-        padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
+    
 }
 
 @media (max-width: 767px) {
@@ -985,7 +989,8 @@ h4 {
     }
     .navbar-brand img {
         max-height: 40px;
-        width: auto;
+        width: 100%;
+
     }
     .nav-invert .navbar-header {
         float: none;
